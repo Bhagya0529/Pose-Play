@@ -1,0 +1,128 @@
+.game-tile {
+    position:relative;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin: 30px;
+    overflow: hidden;
+}
+
+.game-tile img {
+    width: 10%;
+    height: 10%;
+    transition: transform 0.3s ease;
+}
+.game-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 3px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+    opacity: 0; /* Initially hidden */
+}
+
+.game-tile:hover img {
+    transform: scale(1.1);
+}
+
+.game-tile:hover .game-name {
+    transform: translateY(0);
+    opacity: 1; /* Display on hover */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+body {
+    font-family: Arial, sans-serif;/* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */ /* Center the background image */
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Add a semi-transparent background color for better readability */
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    color: #ffffff;
+    
+}
+
+.btn {
+    display:inline-flex;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #600874;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn a {
+    color: rgb(255, 255, 255); /* Change to your desired text color */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.btn:hover {
+    background-color: #9306d4;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #a5a5a5;
+}
